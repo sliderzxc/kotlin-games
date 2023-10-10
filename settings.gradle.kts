@@ -17,5 +17,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "kotlin-console-games"
+rootProject.name = "kotlin-games"
 include(":core")
