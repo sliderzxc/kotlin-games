@@ -1,7 +1,14 @@
 [versions]
 kotlin = "1.9.10"
+korge = "5.0.5"
+ksp = "1.9.0-1.0.11"
 
 [libraries]
+ksp-plugin = { module = "com.google.devtools.ksp:symbol-processing-gradle-plugin", version.ref = "ksp" }
+kotlin-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+korge-core = { id = "com.soywiz.korge", version.ref = "korge" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+configurations-kotlin-korge = { id = "kotlin-korge-convention", version.require = "SNAPSHOT" }

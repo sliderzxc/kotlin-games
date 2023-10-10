@@ -1,6 +1,7 @@
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
+    includeBuild("build-plugins")
     repositories {
         gradlePluginPortal()
         mavenCentral()
@@ -9,13 +10,15 @@ pluginManagement {
 }
 
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
     repositories {
-        google()
         mavenCentral()
-        maven("https://jitpack.io")
+        google()
     }
 }
 
 rootProject.name = "kotlin-games"
+
+includeBuild("build-plugins/configurations")
+
 include(":core")
