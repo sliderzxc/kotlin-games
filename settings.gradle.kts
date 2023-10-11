@@ -1,7 +1,6 @@
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
-    includeBuild("build-plugins")
     repositories {
         gradlePluginPortal()
         mavenCentral()
@@ -19,6 +18,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "kotlin-games"
 
-includeBuild("build-plugins/configurations")
-
-include(":core")
+include(":snake-game")
